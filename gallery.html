@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Lens & Light | Photography Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body class="page-gallery">
+  <nav class="nav">
+    <a href="index.html" class="logo">Lens & Light</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <main class="gallery-page">
+    <header class="gallery-header">
+      <span class="section-label">Selected Works</span>
+      <h1 class="gallery-title">Gallery</h1>
+      <p class="gallery-subtitle">Browse by category</p>
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="landscapes">Landscapes</button>
+        <button class="filter-btn" data-category="wildlife">Wildlife</button>
+        <button class="filter-btn" data-category="nightscapes">Nightscapes</button>
+      </div>
+    </header>
+
+    <div class="gallery-masonry" aria-live="polite">
+      <!-- Cards are injected from gallery-config.js (R2 image list) -->
+    </div>
+  </main>
+
+  <!-- Image popup / lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-img">
+      <p class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 Chandralekha Yenugunti. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="gallery-config.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>
